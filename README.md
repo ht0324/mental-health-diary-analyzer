@@ -2,7 +2,14 @@
 
 ## Overview
 
-The Mental Health Diary Analyzer is an innovative application that uses AI to analyze personal diary entries, providing emotional feedback and insights. This tool aims to support users in understanding their emotional states and thought patterns, potentially contributing to better mental health awareness. The application also features a real-time virtual counseling system that enables voice-based interactions with an AI counselor by using OpenAI Realtime API.
+The Mental Health Diary Analyzer is an innovative application that uses AI to analyze personal diary entries, providing emotional feedback and insights. This tool aims to support users in understanding their emotional states and thought patterns, potentially contributing to better mental health awareness. The application also features a real-time virtual counseling system that enables **voice-based interactions** with an AI counselor by using OpenAI Realtime API.
+
+## Demo
+
+
+https://github.com/user-attachments/assets/adda6342-3558-4350-aa9d-2efac0e84a98
+
+
 
 ## Features
 
