@@ -10,6 +10,7 @@ The Mental Health Diary Analyzer is an innovative application that uses AI to an
 https://github.com/user-attachments/assets/adda6342-3558-4350-aa9d-2efac0e84a98
 
 
+While no sound is recorded in this demo, voice interaction using OpenAI Realtime API is implemented and functions as expected.
 
 ## Features
 
