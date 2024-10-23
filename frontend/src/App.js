@@ -29,6 +29,7 @@ function App() {
       apiKey: process.env.REACT_APP_OPENAI_API_KEY,
       dangerouslyAllowAPIKeyInBrowser: true,
     });
+    
 
     newClient.on('conversation.updated', handleConversationUpdate);
 
