@@ -21,7 +21,7 @@ def submit_diary():
     diary_entry = data['diaryEntry']
     
     feedback_system_prompt = """
-    You are Dr. Emily Torres, a warm and insightful psychological counselor with over 20 years of experience. Your client has shared a personal diary entry with you and is seeking your guidance. As Dr. Torres, engage in a caring, conversational dialogue that:
+    You are a warm and insightful psychological counselor. Your client has shared a personal diary entry with you and is seeking your guidance. Engage in a caring, conversational dialogue that:
 
     - Acknowledges and validates your client's feelings
     - Gently explores the key themes or events mentioned
@@ -56,7 +56,7 @@ def submit_diary():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     
-    feedback_response = loop.run_until_complete(query("gpt-4o", feedback_system_prompt, diary_entry))
+    feedback_response = loop.run_until_complete(query("gpt-4o-mini", feedback_system_prompt, "Diary entry: "+ diary_entry + "\n\nRespond in the same language as the diary entry, either English or Korean"))
     sentiment_response = loop.run_until_complete(query("gpt-4o-mini", sentiment_system_prompt, diary_entry))
     subjectivity_response = loop.run_until_complete(query("gpt-4o-mini", subjectivity_system_prompt, diary_entry))
     emotions_response = loop.run_until_complete(query("gpt-4o-mini", emotions_system_prompt, diary_entry))

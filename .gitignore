@@ -1,1 +1,9 @@
 node_modules
+
+# Python
+backend/__pycache__/
+
+
+# Frontend
+frontend/build/
+backend/__pycache__/api.cpython-312.pyc

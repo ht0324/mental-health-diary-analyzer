@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Mental Health Diary Analyzer is an innovative application that uses AI to analyze personal diary entries, providing emotional feedback and insights. This tool aims to support users in understanding their emotional states and thought patterns, potentially contributing to better mental health awareness.
+The Mental Health Diary Analyzer is an innovative application that uses AI to analyze personal diary entries, providing emotional feedback and insights. This tool aims to support users in understanding their emotional states and thought patterns, potentially contributing to better mental health awareness. The application also features a real-time virtual counseling system that enables voice-based interactions with an AI counselor by using OpenAI Realtime API.
 
 ## Features
 
@@ -14,12 +14,19 @@ The Mental Health Diary Analyzer is an innovative application that uses AI to an
 - Comprehensive feedback generation
 - Visual representation of emotional analysis
 - Responsive and intuitive user interface
+- Real-time Virtual Counseling:
+  - Voice-based interaction with AI counselor
+  - Real-time audio streaming
+  - Context-aware responses based on diary analysis
+  - Interactive conversation history
 
 ## Technology Stack
 
 - Frontend: React.js
 - Backend: Flask (Python)
 - AI/ML: OpenAI GPT models
+- Real-time Communication: OpenAI Realtime API
+- Audio Processing: WavRecorder, WavStreamPlayer
 - Data Visualization: recharts
 - Markdown Rendering: react-markdown
 
@@ -32,6 +39,9 @@ mental-health-diary-analyzer/
 │   ├── src/
 │   │   ├── App.js
 │   │   ├── App.css
+│   │   ├── wavtools/
+│   │   │   ├── WavRecorder.js
+│   │   │   └── WavStreamPlayer.js
 │   │   └── ...
 │   ├── package.json
 │   └── ...
@@ -60,14 +70,15 @@ mental-health-diary-analyzer/
 3. Set up the frontend:
    ```
    cd ../frontend
-   npm install
+   npm install @openai/realtime-api-beta react-markdown
    ```
 
 4. Configure API keys:
    - Create a `.env` file in the backend directory
-   - Add your OpenAI API key:
+   - Add your API keys:
      ```
      OPENAI_API_KEY=your_api_key_here
+     OPENAI_REALTIME_API_KEY=your_realtime_api_key_here
      ```
 
 ## Building and Running the Application
@@ -90,14 +101,31 @@ The application should now be running with full functionality.
 
 ## Usage
 
-1. On the main page, you'll see a text area where you can write your diary entry.
-2. After writing your entry, click the "Submit Entry" button.
+1. Enter your name when prompted.
+2. Write your diary entry in the text area and click the "Submit Entry" button.
 3. The system will process your entry and provide:
    - A sentiment analysis graph
    - A subjectivity analysis graph
    - Detected emotions
    - Detailed feedback from an AI counselor persona
 
+4. To use the Virtual Counselor:
+   - Click the "Connect" button to start a counseling session
+   - Hold the "Hold to Speak" button while speaking
+   - Release the button to send your message
+   - The AI counselor will respond with voice and text
+   - View the conversation history in the chat log
+   - Click "Disconnect" to end the session
+
+## Virtual Counselor Features
+
+- Real-time voice interaction
+- Context-aware responses based on diary analysis
+- Conversation history tracking
+- Voice output with configurable AI voice
+- Automatic speech-to-text transcription
+- Seamless audio streaming
+
 ## Disclaimer
 
-This system is not a substitute for professional mental health support. If you're experiencing severe emotional distress or mental health issues, please seek help from a qualified mental health professional.
+This system is not a substitute for professional mental health support. The virtual counselor is an AI-powered tool designed to provide basic emotional support and guidance. If you're experiencing severe emotional distress or mental health issues, please seek help from a qualified mental health professional.

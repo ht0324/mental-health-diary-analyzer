@@ -5,11 +5,10 @@ import subprocess
 from openai import AsyncOpenAI
 from anthropic import AsyncAnthropic
 
-OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
-ANTHROPIC_API_KEY = "YOUR_ANTHROPIC_API_KEY"
+OPENAI_API_KEY = "OPENAI_API_KEY"
+ANTHROPIC_API_KEY = "ANTHROPIC_API_KEY"
 client_anthropic = AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
-client = AsyncOpenAI()
-client.api_key = OPENAI_API_KEY
+client = AsyncOpenAI(api_key=OPENAI_API_KEY)
 
 async def query_openai(model, system_prompt, user_prompt, max_tokens=4000, temperature=0.0):
     completion = await client.chat.completions.create(

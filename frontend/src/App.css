@@ -147,3 +147,157 @@ button:disabled {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* ... (keep all existing styles) ... */
+
+/* New styles for virtual counselor */
+.conversation {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.conversation h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #4a4a4a;
+}
+
+.conversation button {
+  margin-right: 10px;
+}
+
+.conversation-log {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #fff;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.conversation-log p {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  word-wrap: break-word; /* Ensure long messages wrap properly */
+}
+
+.conversation-log p:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+/* Styles for recording button */
+.recording {
+  background-color: #ff4136;
+}
+
+.recording:hover {
+  background-color: #e60000;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .App-header {
+    padding: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .conversation button {
+    margin-bottom: 10px;
+  }
+}
+
+button.recording {
+  background-color: #ff4136;
+}
+
+button.recording:hover {
+  background-color: #e60000;
+}
+
+/* Add these styles to your App.css file */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-header {
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.modal-header p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.name-input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.modal-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #45a049;
+}
+
+.modal-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
