@@ -38,6 +38,11 @@ While no sound is recorded in this demo, voice interaction using OpenAI Realtime
 - Data Visualization: recharts
 - Markdown Rendering: react-markdown
 
+## System Diagram
+
+<img width="773" alt="System_diagram" src="https://github.com/user-attachments/assets/6db1f0f7-ef11-456c-b546-0467bfeabd40">
+
+
 ## Project Structure
 
 ```
